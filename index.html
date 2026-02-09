@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border-color: #05040f;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url(background.png.avif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            margin-top: 2px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 9%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        
+        nav {
+            background-color: #11ffee00;
+            display: flex;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin : 0 1rem;
+            display: inline-block;
+            transition: 0.3s ease;
+            padding-top: 10px;
+
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+            color: rgb(184, 2, 114);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 5rem;
+        }
+    
+       .logo {
+         color: white;
+         font-size: 26px;
+         font-weight: bold;
+         font-family: arial;
+         text-decoration: none;
+        }
+
+        .logo a {
+            padding-left: 0;
+        }
+        
+        /* Search Bar Styles */
+        .searchbar {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            float: right;
+            margin-right: 20px;
+        }
+        
+        .searchbar input {
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 150px;
+            font-size: 14px;
+        }
+        
+        .searchbar input:focus {
+            outline: none;
+            border-color: #e466ba;
+            box-shadow: 0 0 5px rgba(228, 102, 186, 0.5);
+        }
+        
+        .searchbar button {
+            padding: 10px 20px;
+            background-color: #b3286d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        
+        .searchbar button:hover {
+            background-color: rgb(184, 82, 141);
+            transform: scale(1.05);
+        }
+
+        section{
+            min-height: 50vh;
+            padding: 1rem 2rem;
+        }
+
+        .home {
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            gap: 8rem;
+            background-color: transparent;
+            margin-left: 5rem;
+            padding-top: 8rem;
+        }    
+
+
+         .home img {
+            position: relative;
+            width: 30vw;
+            border-radius: 50%;
+            box-shadow: #c4067b33;
+            cursor: pointer;
+            transition: 0.2s linear;
+        }
+
+        .home img :hover {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        .home-content h1{
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.1;
+            padding-top: 100px;
+            padding-left: 50px;
+        }
+
+        /* sub-line under the main h1 text */
+        .home-content h1 .sub{
+            display: block;
+            color: #a11160;
+            font-size: 1rem;
+            line-height: 1.2;
+            margin-top: 0.25rem;
+            transform: translateX(-80px);
+            transition: transform 0.15s ease;
+        }
+
+        .home-content p {
+            margin-top: 1rem;
+            color: white;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            max-width: 600px;
+            padding-right: 200px;
+        }
+
+        .social-icons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icons a {
+            color: #a11160;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #e466ba;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <a href="#" class="logo">calligraphy_by_mahi</a>
+
+      <nav>
+         <a href="#home">Home</a>
+         <a href="#about">About</a>
+         <a href="#services">Services</a>
+         <a href="#contact">Contact</a>
+          <div class="searchbar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchFunction()">Search</button>
+          </div>   
+      </nav>
+    </header>
+    
+    <section class="home">
+        <div class="home image">
+          <img src="logo.jpg.jpg"alt="">
+        </div>
+        <div class="home-content">
+            <h1><span class="main">ماہین</span><span class="sub">calligraphy_by_mahi</span></h1>
+            <div>
+                <p>hi! I'm mahi, a passionate calligraphy
+                 artist who loves turning words into beautiful art.
+                 i create unique calligraphy pieces with love,
+                 whether it's for gifting, events or personal
+                 ispiration. welcome to my creative space!</p>
+                 <div class="social-icons">
+                    <a href="https://www.instagram.com/calligraphy_by_mahii?igsh=bzlscmtxb3gzMms=" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@calligraphy_by_mahi?lang=en&is_from_webapp=1&sender_device=mobile&sender_web_id=7585186896331638292" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@calligraphy_by_mahi?si=pnV3ME0PaHiR3N9U" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                 </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
